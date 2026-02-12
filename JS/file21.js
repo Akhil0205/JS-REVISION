@@ -42,17 +42,16 @@ const products = [
     category: "Laptop",
   },
 ];
-// let search="Laptop"
-// const resultArray=products.map((product)=>product)
+
+
+let category="ProductId"
+let text=1;
+
+// const resultArray=products.filter((product)=>product.id===text)
 // console.log(resultArray)
 
-let search="Laptop"
-const resultArray=products.filter((product)=>product.category===search)
+//use find instead of filter for faster output
+
+//will use index field in mongodb and gives single result
+const resultArray=products.find((product)=>product.id===text)
 console.log(resultArray)
-//map is used to create new array with new or modified value
-// let search="Laptop"
-// const resultArray=products.map((product)=>
-//     {
-//         return product
-//     })
-// console.log(resultArray)
