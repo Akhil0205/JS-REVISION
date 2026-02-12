@@ -118,46 +118,51 @@ const products = [
     category: "Laptop",
   },
 ];
-const cart = [];
-function addToCart(productId) {
-  const product = products.find((product) => product.id === productId);
-  cart.push({ ...product, quantity: 1 });
-}
-function increment(productId) {
-  const item = cart.find((product) => product.id === productId);
-  item.quantity++;
-}
-function decrement(productId) {
-  const item = cart.find((product) => product.id === productId);
-  item.quantity--;
-}
-const userEmail = "john@gmail.com";
-function calculateTotal() {
-  let total = 0;
-  for(let item of cart) {
-    productTotal = item.price * item.quantity;
-    total += item.price * item.quantity;
-  }
-  return total;
-}
-function placeOrder(){
-  if(cart.length === 0) {
-    console.log("Cart is empty");
-    return;
-  }
-  const total = calculateTotal();
+// const cart = [];
+// function addToCart(productId) {
+//   const product = products.find((product) => product.id === productId);
+//   cart.push({ ...product, quantity: 1 });
+// }
+// function increment(productId) {
+//   const item = cart.find((product) => product.id === productId);
+//   item.quantity++;
+// }
+// function decrement(productId) {
+//   const item = cart.find((product) => product.id === productId);
+//   item.quantity--;
+// }
+// const userEmail = "john@gmail.com";
+// function calculateTotal() {
+//   let total = 0;
+//   for(let item of cart) {
+//     productTotal = item.price * item.quantity;
+//     total += item.price * item.quantity;
+//   }
+//   return total;
+// }
+// function placeOrder(){
+//   if(cart.length === 0) {
+//     console.log("Cart is empty");
+//     return;
+//   }
+//   const total = calculateTotal();
 
-  const order = {
-    email: userEmail,
-    items: cart, 
-    orderValue: total,
-    totalValue: productTotal
-  };
-  console.log("Order placed successfully");
-  console.log(order);
-  console.log("product total", productTotal)
-  console.log("Total order value", total);
-}
+//   const order = {
+//     email: userEmail,
+//     items: cart, 
+//     orderValue: total,
+//     totalValue: productTotal
+//   };
+//   console.log("Order placed successfully");
+//   console.log(order);
+//   console.log("product total", productTotal)
+//   console.log("Total order value", total);
+// }
+
+
+products.forEach((products)=>
+  {console.log(product.id,product.name,product.desc,product.price)})
+
 addToCart(1);
 addToCart(3);
 addToCart(5);
@@ -173,4 +178,8 @@ placeOrder();
 
 
 // now we want in the format as 
-//1,"Product"
+//1,"Product 1","This is description",100
+//2,"Product 1","This is description",100
+
+
+// console.log("----------------")
