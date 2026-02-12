@@ -55,3 +55,5 @@ let text=1;
 //will use index field in mongodb and gives single result
 const resultArray=products.find((product)=>product.id===text)
 console.log(resultArray)
+
+//map is ued for modified value
