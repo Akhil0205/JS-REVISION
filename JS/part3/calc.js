@@ -9,7 +9,7 @@ function subtract(a,b)
 }
 
 
-
+export const name="John"
 //METHOD-2
 // export default add;
 // export { subtract };
