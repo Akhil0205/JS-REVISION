@@ -25,11 +25,23 @@
 
 
 
-function add(...arr) //rest operator
-{
-    
-    return arr.reduce((sum,num)=>sum+num,0)
-}
+// function add(...arr) //rest operator
+// {
+
+//     let sum=arr.reduce((sum,num)=>sum+num,0)
+//     return sum
+// }
 //we have to return sum here
+// const result=add(7,5,8,9)
+// console.log(result)
+
+
+//in arrow function only rest operator works
+const add=(...args)=>
+    {
+        //console.log(args)
+        let sum=args.reduce((total,num)=>total+num,0)
+        return sum
+    }
 const result=add(7,5,8,9)
-console.log(result)
+console.log(result)     
