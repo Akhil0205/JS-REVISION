@@ -2,10 +2,10 @@ const products = ["product1", "product2", "product3"];
 // for(let i=0;i<products.length;i++){
 //     console.log(products[i])
 // }
-// products.forEach(()=>{})
+//products.forEach(()=>{})
 products.forEach((product) => console.log(product));
 
-// function controller(f) {
+//  function controller(f) {
 //   console.log(f)
 // }
 // controller(10);
@@ -13,7 +13,7 @@ products.forEach((product) => console.log(product));
 // let a = 10
 // a//()
 // let name = "James"
-// //name()
+//name()
 // const f1 = () => console.log("Hello World")
 // f1()
 
