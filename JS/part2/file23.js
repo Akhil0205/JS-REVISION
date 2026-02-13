@@ -63,3 +63,14 @@ let resulte=marks.some((mark)=>
 if(resulte) console.log("Pass")   
 else console.log("Fail")     
 //console.log(pass)
+
+//EVERY
+//numbers.every(()=>{})
+const check=numbers.every((mark)=>
+    {
+        return mark>50
+    })
+if(check) console.log("Pass")    
+else console.log("Fail")
+
+//SAMPLE
