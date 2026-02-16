@@ -23,8 +23,20 @@
 // let d=new Date(2026,1,1)
 // let d=new Date("February 16,2026 10:10:10")
 //let d=new Date(2026,1,1,10,10,10)
-let d=new Date("16Febr 2024 10:10:10")
+//let d=new Date("16Febr 2024 10:10:10")
 //let d=new Date("16hdvhdbv,2026 10:10:10")
 //junk
+
+//console.log(d.getMonth())
+
+const d = new Date()
+// d.setFullYear(2025)
+// d.setMonth(11)
+// d.setDate(21)
+// d.setHours(10)
+// d.setMinutes(10)
+// d.setSeconds(10)
+// d.setMilliseconds(1)
+//d.getTime()
+d.setTime(999999999990)
 console.log(d)
-console.log(d.getMonth())
