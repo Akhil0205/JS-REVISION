@@ -7,3 +7,5 @@ let str="Hello"
 // console.log(str.includes("w"))
 // console.log(str.startsWith("H"))
 // console.log(str.endsWith("u"))
+
+console.log(str.slice(1,3))
