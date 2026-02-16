@@ -2,7 +2,12 @@ const student=
 {
     name:"John",
     age:21,
-    city:"Jalandhar"
+    city:"Jalandhar",
+    marks:{
+        math:60,
+        science:90
+    }
+
 }
 //without destructuring
 // console.log(student.name)
@@ -30,8 +35,15 @@ const student=
 // console.log(userName)
 
 
-const {city="Delhi"}=student
-console.log(city)
+// const {city="Delhi"}=student
+// console.log(city)
 //it will print the default value
 
 
+// const {marks}=student
+// console.log(marks)
+
+
+//destructure nested object
+const {marks:{math}}=student
+console.log(math)
