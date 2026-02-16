@@ -1,7 +1,8 @@
 const student=
 {
     name:"John",
-    age:21
+    age:21,
+    city:"Jalandhar"
 }
 //without destructuring
 // console.log(student.name)
@@ -18,8 +19,19 @@ const student=
 // console.log(name)
 // console.log(age)
 
-const {n1,n2}=student
-console.log(n1)
-console.log(n2)
+// const {n1,n2}=student
+// console.log(n1)
+// console.log(n2)
 
 //here we must use the same property name so it doesnt return undefined
+
+//reassign new name variable
+// const {name:userName}=student
+// console.log(userName)
+
+
+const {city="Delhi"}=student
+console.log(city)
+//it will print the default value
+
+
