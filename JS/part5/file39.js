@@ -13,9 +13,28 @@
 //TDZ = temporal dead zone
 
 
-greet()
+//greet()
 //function is fully hoisted so no error
-function greet()
-{
-    console.log("Hello World")
-}
+// function greet()
+// {
+//     console.log("Hello World")
+// }
+
+// greet()
+// const greet=()=>
+//     {
+//         console.log("Hello World")
+//     }
+//let and const will get same error
+//cannot access before initialization
+//difference between regular and arrow function    
+
+//- regualar func can be hoisted fully but arrow function cant be
+
+
+
+const greet=()=>
+    {
+        console.log("Hello World")
+    }
+greet()    
