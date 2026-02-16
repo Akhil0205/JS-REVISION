@@ -23,3 +23,7 @@ const numbers=[15,2,1,8,3]
 // console.log(numbers.includes(3))
 // console.log(numbers.slice(1,3))
 console.log(numbers.slice(2,5))
+
+
+//shift() removes the first element of an array and returns it.
+//unshift() adds one or more elements to the start of the array.
