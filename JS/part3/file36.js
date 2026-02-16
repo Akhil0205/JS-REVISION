@@ -8,4 +8,6 @@ let num=10.759
 // console.log(isNaN(num))
 
 // console.log(Math.random())
-console.log(Math.max(5,7,1,8))
+// console.log(Math.max(5,7,1,8))
+// console.log(Math.min(5,7,1,8))
+console.log(Math.pow(10,2))
