@@ -22,61 +22,56 @@
 
 // Never rejects.
 
-const students = [
-  { id: 1, name: "Vansh", s1: true, s2: true, s3: false },
-  { id: 2, name: "Vaishnav", s1: true, s2: true, s3: true },
-  { id: 3, name: "Nikhil", s1: false, s2: true, s3: true },
-  { id: 4, name: "Vishnu", s1: false, s2: false, s3: false },
-];
 
-function getStudentInfo(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const found = students.find((student) => student.id === id);
-      if (found) resolve("Student Info");
-      else reject("Student does not Exist");
-    }, 2000);
-  });
+//p1,p2,p3
+function p1()
+{
+    return new Promise((resolve,reject)=>
+        {
+            setTimeout(()=>{
+                resolve("P1 success")
+            },5000)
+            
+        })
+
 }
-function getAttendanceInfoS1(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const found = students.find((student) => student.id === id && student.s1 === true);
-      if (found) resolve();
-      else reject("Student is Absent");
-    }, 1000);
-  });
+function p2()
+{
+    return new Promise((resolve,reject)=>
+        {
+            setTimeout(()=>{
+                //resolve("P2 success")
+                reject("P2 failed")
+            },1000)
+            
+            
+        })
+
 }
-function getAttendanceInfoS2(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const found = students.find((student) => student.id === id && student.s2 === true);
-      if (found) resolve();
-      else reject("Student is Absent");
-    }, 1000);
-  });
+function p3()
+{
+    return new Promise((resolve,reject)=>
+        {
+            setTimeout(()=>{
+                resolve("P3 success")
+            },2000)
+            
+        })
+
 }
-function getAttendanceInfoS3(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const found = students.find((student) => student.id === id && student.s3 === true);
-      if (found) resolve();
-      else reject("Student is Absent");
-    }, 1000);
-  });
+async function main()
+{
+    try{
+    // const result=await Promise.all([p1(),p2(),p3()]);
+    //  const result=await Promise.any([p1(),p2(),p3()]);
+    // const result=await Promise.race([p1(),p2(),p3()]);
+     const result=await Promise.allSettled([p1(),p2(),p3()]);
+
+    console.log(result)
+    }catch(e)
+    {
+        console.log(e)
+    }
 }
-async function main() {
-  try {
-    const studentId = 5;
-    const found=await getStudentInfo(studentId)
-    const result = await Promise.any([
-      getAttendanceInfoS1(studentId),
-      getAttendanceInfoS2(studentId),
-      getAttendanceInfoS3(studentId),
-    ]);
-    console.log("Student is present");
-  } catch (err) {
-    console.log(err);
-  }
-}
-main();
+main()
+//total 6 seconds 
